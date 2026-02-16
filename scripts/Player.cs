@@ -32,5 +32,30 @@ public partial class Player : CharacterBody3D {
 
         Velocity = velocity;
         MoveAndSlide();
+
+        //collision fea
+        /*for (int i = 0; i < GetSlideCollisionCount(); i++) {
+            KinematicCollision3D collision = GetSlideCollision(i);
+            Node3D otherBody = collision.GetCollider() as Node3D;
+
+            if (otherBody != null) {
+                GD.Print("Character collided with: " + otherBody.Name);
+
+                // You can check if the other body is a RigidBody3D or a specific type/group
+                if (otherBody is RigidBody3D rigidBody) {
+                    GD.Print("Collided with a RigidBody3D named: " + rigidBody.Name);
+                    // Add your custom logic here (e.g., apply a force)
+                }
+            }
+        }*/
+    }
+
+    private void OnBodyEntered(Node body) {
+        GD.Print("RigidBody detected a body entered: " + body.Name);
+
+        if (body is RigidBody3D rigidBody) {
+            GD.Print("The CharacterBody3D " + rigidBody.Name + " entered the Rigidbody's collision area.");
+            // Add your custom logic here (e.g., play sound, decrease health)
+        }
     }
 }
