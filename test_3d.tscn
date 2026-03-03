@@ -68,4 +68,31 @@ mesh = SubResource("BoxMesh_hkadm")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Obstacle_1/Area3D" unique_id=1298254413]
 shape = SubResource("BoxShape3D_mer1j")
 
+[node name="Panel" type="Panel" parent="." unique_id=1242063403]
+offset_right = 1165.0
+offset_bottom = 669.0
+
+[node name="Label" type="Label" parent="Panel" unique_id=1218722439]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.19000001
+anchor_bottom = 0.08400001
+offset_right = -0.35002136
+offset_bottom = -0.19600296
+text = "Probando UI"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Panel" unique_id=1314794750]
+modulate = Color(0.11372549, 1, 1, 1)
+self_modulate = Color(1, 0.4862745, 1, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.291
+anchor_right = 0.381
+anchor_bottom = 0.078
+offset_left = -0.015014648
+offset_right = 0.13497925
+offset_bottom = -0.1819992
+text = "Pausa"
+
 [connection signal="body_entered" from="Obstacle_1/Area3D" to="CharacterBody3D" method="OnBodyEntered"]
