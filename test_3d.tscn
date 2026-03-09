@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dp74ig67687jg"]
 
 [ext_resource type="Script" uid="uid://dvnvaixn6dlv5" path="res://scripts/Player.cs" id="1_hkadm"]
+[ext_resource type="Texture2D" uid="uid://gbjb5bpvny6v" path="res://icon.svg" id="2_0h7nl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yi1vn"]
 
@@ -94,5 +95,34 @@ offset_left = -0.015014648
 offset_right = 0.13497925
 offset_bottom = -0.1819992
 text = "Pausa"
+
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=1895306651]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.56
+anchor_right = 0.67
+anchor_bottom = 0.19100001
+offset_left = -0.4000244
+offset_right = -0.5500488
+offset_bottom = 0.22099304
+texture = ExtResource("2_0h7nl")
+
+[node name="ItemList" type="ItemList" parent="Panel" unique_id=1162910395]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.84900004
+anchor_right = 0.94600004
+anchor_bottom = 0.11400001
+offset_left = -0.08502197
+offset_top = 1.0
+offset_right = -0.09008789
+offset_bottom = -0.26600647
+select_mode = 2
+item_count = 4
+max_columns = 2
+item_0/text = "Opt 1"
+item_1/text = "Opt 2"
+item_2/text = "Opt 3"
+item_3/text = "Opt 4"
 
 [connection signal="body_entered" from="Obstacle_1/Area3D" to="CharacterBody3D" method="OnBodyEntered"]
