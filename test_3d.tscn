@@ -3,16 +3,16 @@
 [ext_resource type="Script" uid="uid://dvnvaixn6dlv5" path="res://scripts/Player.cs" id="1_hkadm"]
 [ext_resource type="Texture2D" uid="uid://gbjb5bpvny6v" path="res://icon.svg" id="2_0h7nl"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yi1vn"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0h7nl"]
 
-[sub_resource type="Sky" id="Sky_hkadm"]
-resource_local_to_scene = true
-sky_material = SubResource("ProceduralSkyMaterial_yi1vn")
+[sub_resource type="Sky" id="Sky_mer1j"]
+sky_material = SubResource("ProceduralSkyMaterial_0h7nl")
 
-[sub_resource type="Environment" id="Environment_yi1vn"]
+[sub_resource type="Environment" id="Environment_s6xjt"]
 background_mode = 2
-sky = SubResource("Sky_hkadm")
-ambient_light_source = 3
+background_energy_multiplier = 1.42
+sky = SubResource("Sky_mer1j")
+ambient_light_color = Color(0.00030480136, 0, 0.009886043, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hkadm"]
 
@@ -29,12 +29,16 @@ size = Vector3(2.0117188, 0.08831787, 1.998291)
 
 [node name="Node3D" type="Node3D" unique_id=2110458220]
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1975438677]
+environment = SubResource("Environment_s6xjt")
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=992533908]
-transform = Transform3D(1, 0, 0, 0, 0.0670053, 0.9977526, 0, -0.9977526, 0.0670053, 1.9676514, 1.4227295, 1.87255)
+transform = Transform3D(0.78096485, 0.041849833, 0.62317127, -0.62457496, 0.052328784, 0.77920973, 0, -0.9977526, 0.0670053, 1.9676514, 2.8529997, 1.87255)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1395480564]
-transform = Transform3D(1, 0, 0, 0, 0.8264129, 0.56306463, 0, -0.56306463, 0.8264129, -3.129882, 1.7190105, 2.2661905)
-environment = SubResource("Environment_yi1vn")
+transform = Transform3D(1, 0, 0, 0, 0.9691062, 0.24664381, 0, -0.24664381, 0.9691062, -0.61800194, 2.0737724, 3.7191248)
+h_offset = 0.32
+v_offset = 0.065
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1486296368]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.94447494, 0)
